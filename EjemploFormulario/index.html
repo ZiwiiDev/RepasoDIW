@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Formulario</title>
+    <style>
+
+        /* Cuando el campo es inválido se pone un borde rojo */
+        input:invalid {
+            border: solid 2px red;
+        }
+        
+
+        /* Cuando el campo es válido se pone un borde verde */
+        input:valid {
+            border: solid 2px green;
+        }
+
+        /* Al lado de cada campo obligatorio se ha puesto una etiqueta span de clase mensaje que se oculta cuando el campo es válido */
+        input:valid +.mensaje { 
+            visibility: hidden;}
+
+        
+        input {
+            width: 40%;
+        }
+
+        
+        #hombre, #mujer {
+            width: 5%;
+        }
+
+        fieldset {
+            width: 60%;
+        }
+
+        #numero{ width: 5rem;}
+       
+
+        .botones{
+            width: 60%;
+            text-align: center;
+        }
+        .boton{
+            color: black;
+            border: 2px solid #0009ba;
+            margin:10px;
+            text-align: center;
+        }
+
+        .enviar{
+            background-color: #52BE80;
+        }
+        .inicializar{
+            background-color: #E74C3C;
+        }
+
+
+        .boton:hover{
+            color: white;
+            font-weight: 800;
+            border: 2px solid #0009ba;
+      
+        }
+
+</style>
+</head>
+
+<body>
+    <h1> Ejemplo de formulario</h1>
+    <form action="" autocomplete="on" validate>
+        <!-- Podemos indicar que el formulario no se valide con novalidate-->
+        <!-- El atributo autocomplete, puede hacerse a nivel de campo. -->
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre: (Obligatorio)</label>
+            <input id="nombre" name="nombre" minlength="3" maxlength="20" placeholder="Nombre" title="Introduzca su nombre máximo 20 caracteres" tabindex="1" required>
+            <!-- mensaje que se muestra para los campos obligatorios, cuando es invalido se muestra y cuando es válido se oculta -->
+            <span class="mensaje"> Inválido</span>
+            <br>
+            <br>
+
+            <label for="apellidos">Apellidos: (Obligatorio)</label>
+            <input id="apellidos" name="apellidos" minlength=3 maxlength=30 placeholder="Apellidos" title="Introduzca sus apellidos máximo 20 caracteres" tabindex="1" required>
+            <!-- mensaje que se muestra para los campos obligatorios, cuando es invalido se muestra y cuando es válido se oculta -->
+            <span class="mensaje"> Inválido</span>
+            <br>
+            <br>
+
+            <label for="correo">Correo Electrónico: (Obligatorio)</label>
+            <input class="tipo_2" type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" title="Introduzca su correo electrónico" tabindex="3" required>
+            <span class="mensaje"> Inválido</span>
+            <br>
+            <br>
+
+            <!-- campo de tipo radio, ver como se enlaza cada opción con su label con los atributos for e id -->
+            <label>Sexo:</label>
+            <label for="hombre">Hombre</label> <input type="radio" value"h" name="sexo" id="hombre">
+            <label for="mujer">Mujer </label><input type="radio" value"m" name="sexo" id="mujer"> 
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Gustos</legend>
+                <label for="numero">Número preferido:</label>
+                <!-- campo número controlado por un patrón, atributo pattern  -->
+
+                <input class="numero" id="numero" name="numero" title="Introduzca un número entre 0 y 9" tabindex="4" pattern="[0-9]{0,1}">
+            <br>
+            <br>
+
+                <label for="comida">Comida preferida:</label>
+                <input class="tipo_2" id="comida" name="comida" minlength=3 maxlength=50 placeholder="Comida preferida" title="Introduzca su comida preferida máximo 50 caracteres" tabindex="6">
+            <br>
+            <br>
+
+                <label for="select-heroes">Elija un personaje de ficción:</label>
+                <select id="select-heroes" acceskey="h" tabindex="6">
+                   <optgroup label="Super Heroes">
+                       <option value="1">Iron Man</option>
+                       <option value="2">Thor</option>
+                       <option value="3">Superman</option>
+                   </optgroup>
+                   <optgroup label="Super Villanos">
+                       <option value="4">Tanos</option>
+                       <option value="5">Loki</option>
+                       <option value="6">Joker</option>
+                   </optgroup>
+               </select>
+        </fieldset>
+
+        <div class="botones">
+            <button class="boton enviar" type="submit">Enviar</button>
+            <button class="boton inicializar" type="reset">Inicializar</button>
+        </div>
+    </form>
+
+    
+</body>
+
+</html>

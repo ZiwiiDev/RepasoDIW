@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- definimos el idioma de nuestra página -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Indicamos la descripción de nuestra página -->
+    <title>Ejemplo de tabla accesible</title>
+    <style>
+        tr,th,td{
+            border:1px solid black;
+        }
+        .hombres{background-color: aqua;}
+        .mujeres{background-color:beige;}
+
+    </style>
+</head>
+<body>
+    <h1> Ejemplo de tabla accesible.</h1>
+
+    <table>
+        <caption>Deportistas (corredores, nadadores y ciclistas) por sexo y provincia</caption>
+        <col>
+        <!-- Agrupamos las columnas relacionados con los hombres -->
+        <colgroup span="3" class="hombres"></colgroup>
+        <!-- Agrupamos las columnas relacionados con las mujeres -->
+        <colgroup span="3" class="mujeres"></colgroup>
+        <!-- Mostramos la cabecera de la tabla con la etiqueta thead-->
+        <thead>
+            <tr>
+                <td>&nbsp;</td>
+                <th id="hombres" scope="colgroup" colspan="3">Hombres</th>
+                <th id="mujeres" scope="colgroup" colspan="3">Mujeres</th>
+            </tr>
+            <tr>
+                <th id="Prov" scope="col">Provincia</th>
+                <th id="H_cor" scope="col">Corredor</th>
+                <th id="H_nad" scope="col">Nadador</th>
+                <th id="H_cic" scope="col">Ciclista</th>
+                <th id="M_cor" scope="col">Corredora</th>
+                <th id="M_nad" scope="col">Nadadora</th>
+                <th id="M_cic" scope="col">Ciclista</th>
+            </tr>
+        </thead>
+        <!-- Mostramos el contenido de la tabla con la etiqueta tbody -->
+        <tbody>
+            <tr>
+                <th scope="row">Jaén</th>
+                <td headers="Prov H_cor">100</td>
+                <td headers="Prov H_nad">150</td>
+                <td headers="Prov H_cic">200</td>
+                <td headers="Prov M_cor">200</td>
+                <td headers="Prov M_nad">150</td>
+                <td headers="Prov M_cic">100</td>
+
+            </tr>
+            <tr>
+                <th scope="row">Granada</th>
+                <td headers="Prov H_cor">300</td>
+                <td headers="Prov H_nad">350</td>
+                <td headers="Prov H_cic">400</td>
+                <td headers="Prov M_cor">400</td>
+                <td headers="Prov M_nad">250</td>
+                <td headers="Prov M_cic">300</td>
+            </tr>
+            <tr>
+                <th scope="row">Almería</th>
+                <td headers="Prov H_cor">325</td>
+                <td headers="Prov H_nad">425</td>
+                <td headers="Prov H_cic">400</td>
+                <td headers="Prov M_cor">450</td>
+                <td headers="Prov M_nad">375</td>
+                <td headers="Prov M_cic">325</td>
+            </tr>
+            <tr>
+                <th scope="row">Murcia</th>
+                <td headers="Prov H_cor">500</td>
+                <td headers="Prov H_nad">1000</td>
+                <td headers="Prov H_cic">1500</td>
+                <td headers="Prov M_cor">1200</td>
+                <td headers="Prov M_nad">1400</td>
+                <td headers="Prov M_cic">800</td>
+            </tr>
+        </tbody>
+        <!-- Mostramos los totales dentro de la etiqueta tfoot-->
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th>
+                <td headers="Prov H_cor">1225</td>
+                <td headers="Prov H_nad">1925</td>
+                <td headers="Prov H_cic">2500</td>
+                <td headers="Prov M_cor">2250</td>
+                <td headers="Prov M_nad">2175</td>
+                <td headers="Prov H_cic">1525</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- Formas de incluir la descripción de la tabla sin utilizar el atributo summary -->
+    <p>Esta tabla muestra una distribución por sexo de personas que practican los siguientes deportes: natación, ciclismo y carrera por provincias"</p>
+</body>
+</html>
