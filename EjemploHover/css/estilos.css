@@ -1,0 +1,132 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    padding: 10px;
+    color: rgb(97, 96, 96);
+}
+.descripcion{
+    text-align: center;
+    padding: 5px 25px;
+    color: rgb(53, 53, 53);
+}
+
+.card{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+.card__perfil{
+    width: 310px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px rgb(201, 201, 201);
+    border: solid rgba(3, 133, 255, 0) 2px;
+    border-radius: 10px;
+}
+
+
+img{
+    width:160px;
+    height:120px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgb(216, 216, 216);
+}
+.card__nombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+hr{
+    width: 100%;
+    height: 4px;
+    background: rgb(223, 221, 221);
+    margin: 20px 5px;
+}
+.card__button{
+    text-align: center;
+    height:50px;
+}
+
+.enlace{
+    background: rgb(0, 110, 255);
+    padding: 8px 20px;
+    color: white;
+}
+
+/* 1. Poner el fondo y el borde de las tarjetas que hay al lado de otro color. Fondo y borde de
+colores diferentes. */
+.card__perfil:hover + .card__perfil {
+    background-color: greenyellow;
+    border-color: green;
+}
+
+.card__perfil:hover {
+    border-color: blue;
+}
+
+/* 2. La tarjeta que hay al lado de la que le has cambiado el color de fondo debe desaparecer. */
+.card__perfil:hover + .card__perfil + .card__perfil {
+    display: none; /* Oculto la segunda tarjeta adyacente */
+}
+
+/* 3. Los bloques dentro de la tarjeta principal (tres) deben ponerse con un borde de color
+(por ejemplo: rojo). Este tipo de bloque son div, relacionadas con pefil, descripción y
+button. */
+.card__perfil:hover .card__nombre,
+.card__perfil:hover .card__descripcion,
+.card__perfil:hover .card__button {
+    border: 2px solid red; /* Aplico un borde rojo a los bloques y mayor borde */
+}
+
+/* 4. El fondo del lenguaje (h2) debe cambiar por ejemplo a negro y la fuente debe tener color
+blanco y pon un borde que sea visible por ejemplo con 6px. */
+.card__perfil:hover h2 {
+    background-color: black; /* Cambio el fondo a negro */
+    color: white;           /* Cambio el color de la fuente a blanco */
+    border: 6px solid aqua; /* Agrego un borde de 6px de ancho en color aqua */
+}
+
+/* 5. Las etiquetas de tipo párrafo deben tener un color rojo y un tamaño mayor (por ejemplo
+20px). */
+.card__perfil:hover h2 ~ p {
+    color: red; /* Cambiar el color del texto a rojo */
+    font-size: 20px; /* Cambiar el tamaño del texto a 20px */
+}
+
+/* 6. La palabra lenguaje o Framework (tipo p) debe tener un borde de color diferente, por
+ejemplo: amarillo. */
+.card__perfil:hover > .card__nombre > h2 + p {
+    border: 10px solid yellow;  /* Agrego un borde de 10px de ancho en color amarillo */
+}
+
+/* 7. Las características del lenguaje (Frontend, fácil, intermedio) deben tener un borde y un
+color diferente, por ejemplo borde verde, color rojo. El borde del primer párrafo, el
+correspondiente a Lenguaje o Frontend debe tener un borde de otro color, por ejemplo
+amarillo y un grosor de 10px. */
+.card__perfil:hover p:nth-of-type(2),
+.card__perfil:hover p:nth-of-type(3),
+.card__perfil:hover p:nth-of-type(4) {
+    border: 2px solid green;    /* Borde verde para las características */
+    color: red;                 /* Color rojo para las características */
+}
+
+.card__perfil:hover p:nth-of-type(2),
+.card__perfil:hover p:nth-of-type(3) {
+    border: 10px solid green; /* Borde verde de 10px para el primer y segundo párrafo */
+}
+
+/* 8. Debes aplicar una media query para presentar la información de forma diferente. */
+@media only screen and (max-width: 600px) {
+    .card {
+      background-color: lightblue; /* Cambio el fondo a color azul clarito */
+    }
+  }

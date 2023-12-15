@@ -1,0 +1,103 @@
+/* Estilos generales para los periódicos */
+.periodicos {
+    display: flex;  /* Coloco los contenidos en línea */
+    gap: 10px;  /* Separación entre un periódico y otro */
+}
+
+.periodico {
+    border: 2px solid purple;   /* Establezco el borde de color purpura y 2px de tamaño */
+    padding: 10px;  /* Agrego un relleno de 10px */
+}
+
+.periodico a {
+    text-decoration: none;  /* Le quito el subrayado */
+    color: blue;    /* Color de texto azul */
+    font-size: 17px;    /* Tamaño de la fuente de 17px */
+    text-align: center; /* Centro el texto */
+    display: block; /* Establezco que ocupe todo el espacio disponible por defecto y el siguiente elemento se situará debajo */
+}
+
+.periodico:hover {
+    background-color: #f0f0f0;  /* Al pasar el ratón por encima el fondo cambia a gris */
+}
+
+/* Estilos específicos para el periódico "Marca" */
+.periodico:first-child a {
+    font-weight: bold;  /* Pongo el periódico "Marca" en negrita */
+}
+
+/* Estilos específicos para el resto de periódicos */
+.periodico:not(:first-child) a::before {
+    content: "“";   /* Primera comilla de apertura */
+    font-size: 24px;    /* Tamaño bastante superior al tamaño de la fuente del periódico */
+    color: black;   /* Color negro */
+}
+.periodico:not(:first-child) a::after {
+    content: "”";   /* Primera comilla de cierre */
+    font-size: 24px;    /* Tamaño bastante superior al tamaño de la fuente del periódico */
+    color: black;   /* Color negro */
+}
+
+/* Estilos para mostrar la dirección del periódico "Marca" al pasar el ratón por encima */
+.periodico:first-child:hover::after {
+    content: "(https://www.marca.com)"; /* Contenido que se muestra al pasar el ratón por encima */
+    font-size: 15px;    /* Tamaño del texto de 15px */
+    color: #636363; /* Color del enlace */
+}
+/*----------------------------------------------------------------------*/
+/* Con el ejemplo creado muestro un ejemplo donde tenga que utilizar la pseudoclase ":lang" */
+.periodicosEjemploLang {
+    display: flex;  /* Coloco los contenidos en línea */
+    gap: 10px;  /* Separación entre un periódico y otro */
+}
+
+.periodicoEjemploLang {
+    border: 2px solid purple;   /* Establezco el borde de color purpura y 2px de tamaño */
+    padding: 10px;  /* Agrego un relleno de 10px */
+}
+
+.periodicoEjemploLang a {
+    text-decoration: none;  /* Le quito el subrayado */
+    color: blue;    /* Color de texto azul */
+    font-size: 17px;    /* Tamaño de la fuente de 17px */
+    text-align: center; /* Centro el texto */
+    display: block; /* Establezco que ocupe todo el espacio disponible por defecto y el siguiente elemento se situará debajo */
+}
+
+.periodicoEjemploLang:hover {
+    background-color: #f0f0f0;  /* Al pasar el ratón por encima el fondo cambia a gris */
+}
+
+/* Estilos específicos para el periódico "Marca" */
+.periodicoEjemploLang:first-child a {
+    font-weight: bold;  /* Pongo el periódico "Marca" en negrita */
+}
+
+/* Estilos específicos para el resto de periódicos */
+.periodicoEjemploLang:not(:first-child) a::before {
+    content: "“";   /* Primera comilla de apertura */
+    font-size: 24px;    /* Tamaño bastante superior al tamaño de la fuente del periódico */
+    color: black;   /* Color negro */
+}
+.periodicoEjemploLang:not(:first-child) a::after {
+    content: "”";   /* Primera comilla de cierre */
+    font-size: 24px;    /* Tamaño bastante superior al tamaño de la fuente del periódico */
+    color: black;   /* Color negro */
+}
+
+/* Estilos para mostrar la dirección del periódico "Marca" al pasar el ratón por encima */
+.periodicoEjemploLang:first-child:hover::after {
+    content: "(https://www.marca.com)"; /* Contenido que se muestra al pasar el ratón por encima */
+    font-size: 15px;    /* Tamaño del texto de 15px */
+    color: #636363; /* Color del enlace */
+}
+
+/* Estilos para periódicos en español (idioma "es") */
+.periodicoEjemploLang a:lang(es) {
+    color: red; /* Si el idioma está en español cambio el color de texto a rojo */
+}
+
+/* Estilos para periódicos en inglés (idioma "en") */
+.periodicoEjemploLang a:lang(en) {
+    color: green; /* Si el idioma está en inglés cambio el color de texto a verde */
+}

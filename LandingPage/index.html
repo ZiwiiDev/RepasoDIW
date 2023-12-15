@@ -1,0 +1,270 @@
+<!---------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <!-- Enlace a un archivo CSS externo llamado 'style.css' -->
+    <title>Actividad 02 · Oliver</title>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <!-- En el encabezado debe salir mi imagen y mi nombre de forma centrada -->
+      <img src="./img/Yo.png" alt="Yo" width="200" height="200" />
+      <h1>Oliver Fabian Stetcu Stepanov</h1>
+    </header>
+
+    <!-- Zona de navegación -->
+    <nav>
+      <!-- En la zona de navegación debe haber un enlace por cada uno de los siguientes ejercicios -->
+      <!-- Al pulsar sobre la opción se irá al apartado del ejercicio -->
+      <a href="#ejercicio2">Ejercicio 2</a>
+      <a href="#ejercicio3">Ejercicio 3</a>
+      <a href="#ejercicio4">Ejercicio 4</a>
+      <a href="#ejercicio5">Ejercicio 5</a>
+    </nav>
+
+    <!-- Contenido -->
+    <!-- En el contenido hay que incluir cada ejercicio -->
+    <main>
+      <!-- Ejercicio 02 -->
+      <section id="ejercicio2">
+        <h2>· Ejercicio 02 ·</h2>
+        <table border="1px">
+          <!-- Tabla con semántica y cebreada -->
+          <thead>
+            <tr>
+              <th>Propiedad</th>
+              <th>Explicación Breve</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#font-variant-numeric">font-variant-numeric</a></td>
+              <td>Permite darle estilo a los números de un texto.</td>
+            </tr>
+            <tr>
+              <td><a href="#letter-spacing">letter-spacing</a></td>
+              <td>Permite modificar el espacio entre los caracteres de un texto.</td>
+            </tr>
+            <tr>
+              <td><a href="#text-align-last">text-align-last</a></td>
+              <td>Controla la alineación del último renglón del texto de varias líneas.</td>
+            </tr>
+            <tr>
+              <td><a href="#word-spacing">word-spacing</a></td>
+              <td>Permite definir el espacio adicional entre palabras de un texto.</td>
+            </tr>
+            <tr>
+              <td><a href="#line-height">line-height</a></td>
+              <td>Define la altura de línea para un elemento de texto.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="font-variant-numeric">
+          <!-- Al pulsar en la tabla en la primera propiedad nos llevará aquí -->
+          <h3>font-variant-numeric</h3>
+          <p>
+            La propiedad <code>"font-variant-numeric"</code> se utiliza para
+            personalizar la apariencia de los números en el texto.
+          </p>
+          <p>
+            Por ejemplo, se indica que se establezca el diseño de los números a
+            números antiguos en lugar de cifras proporcionales.
+          </p>
+          <p>Ejemplo:</p>
+          <pre>
+            <code>
+                p.ejemplo1Ej02 {
+                    margin-left: 120px;
+                    color: purple;
+                    font-variant-numeric: oldstyle-nums;
+                }
+            </code>
+          </pre>
+          <p>Resultado:</p>
+          <p class="ejemplo1Ej02">1234567890</p>
+        </div><br>
+
+        <div id="letter-spacing">
+          <h3>letter-spacing</h3>
+          <p>
+            La propiedad <code>"letter-spacing"</code> define la cantidad de
+            espacio entre los caracteres de un texto. Se utiliza con unidades
+            'em' o 'ex'.
+          </p>
+          <p>
+            Por ejemplo, se muestra un texto con mayor espacio entre letras.
+          </p>
+          <p>Ejemplo:</p>
+          <pre>
+            <code>
+                p.ejemplo2Ej02 {
+                    margin-left: 120px;
+                    color: purple;
+                    letter-spacing: 0.5em;
+                }
+            </code>
+          </pre>
+          <p>Resultado:</p>
+          <p class="ejemplo2Ej02">Espaciado entre letras aumentado</p>
+        </div><br>
+
+        <div id="text-align-last">
+          <h3>text-align-last</h3>
+          <p>
+            La propiedad <code>"text-align-last"</code> establece la alineación
+            del último renglón del texto de un párrafo con muchas líneas. Se le
+            puede aplicar "left", "right" o "center".
+          </p>
+          <p>
+            Por ejemplo, el párrafo tiene varias líneas y hacemos que se
+            justifique el último renglón, para crear un efecto estéticamente
+            agradable.
+          </p>
+          <p>Ejemplo:</p>
+          <pre>
+            <code>
+                p.ejemplo3Ej02 {
+                    margin-left: 120px;
+                    color: purple;
+                    text-align-last: center;
+                }
+            </code>
+          </pre>
+          <p>Resultado:</p>
+          <p class="ejemplo3Ej02">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus
+            mauris, blandit vitae auctor id, rhoncus id eros. Nullam sit amet
+            nulla ac sapien eleifend ultrices. Curabitur ac dictum metus.
+            Pellentesque ullamcorper dolor sit amet mi imperdiet egestas. Nam eu
+            tellus sed nibh tincidunt rutrum eu sed augue. Cras vestibulum
+            elementum tortor in gravida. Sed augue risus, tempor in justo non,
+            fermentum faucibus nibh.
+          </p>
+        </div><br>
+
+        <div id="word-spacing">
+          <h3>word-spacing</h3>
+          <p>
+            La propiedad <code>"word-spacing"</code> ajusta el espacio entre las
+            palabras de un texto. Se puede especificar un valor fijo, relativo o
+            incluso negativo.
+          </p>
+          <p>
+            Por ejemplo, se muestra un espacio adicional de 5px entre cada
+            palabra en el párrafo.
+          </p>
+          <p>Ejemplo:</p>
+          <pre>
+            <code>
+                p.ejemplo4Ej02 {
+                    margin-left: 120px;
+                    color: purple;
+                    word-spacing: 15px;
+                }
+            </code>
+          </pre>
+          <p>Resultado:</p>
+          <p class="ejemplo4Ej02">
+            Este es un ejemplo de texto con espacio adicional entre las
+            palabras.
+          </p>
+        </div><br>
+
+        <div id="line-height">
+          <h3>line-height</h3>
+          <p>
+            La propiedad <code>"line-height"</code> controla la altura de línea,
+            que es la altura total de una línea de texto, incluyendo el espacio
+            entre líneas y el espacio adicional (si lo hay) que rodea el texto.
+          </p>
+          <p>
+            Por ejemplo, se establece la altura de la línea a 1.5 veces la
+            altura normal del texto. Esto afectará el espacio entre líneas y el
+            espacio vertical total ocupado por el texto.
+          </p>
+          <p>Ejemplo:</p>
+          <pre>
+            <code>
+                p.ejemplo5Ej02 {
+                    margin-left: 120px;
+                    color: purple;
+                    line-height: 1.5;
+                }
+            </code>
+          </pre>
+          <p>Resultado:</p>
+          <p class="ejemplo5Ej02Normal">Este es un párrafo de texto normal.</p>
+          <p class="ejemplo5Ej02Ajustada">Este es un párrafo de texto con line-height ajustado.</p>
+        </div>
+      </section><br><br>
+
+      <!-- Ejercicio 03 -->
+      <section id="ejercicio3">
+        <h2>· Ejercicio 03 ·</h2>
+        <div id="divEj03">
+          <div class="zona zona1" data-imagen="Imagen 1"></div>
+          <div class="zona zona2" data-imagen="Imagen 2"></div>
+          <div class="zona zona3" data-imagen="Imagen 3"></div>
+          <div class="zona zona4" data-imagen="Imagen 4"></div>
+        </div>
+      </section><br><br>
+
+      <!-- Ejercicio 04 -->
+      <section id="ejercicio4">
+        <h2>· Ejercicio 04 ·</h2>
+        <div class="divEj04">
+          <h1 class="titleEj04">ODS 8: Trabajo Decente y Crecimiento Económico</h1>
+          <div class="ods8Ej04">
+            <p>
+              El Objetivo de Desarrollo Sostenible 8 busca promover el
+              crecimiento económico sostenido, inclusivo y sostenible, el empleo
+              pleno y productivo y el trabajo decente para todos.
+            </p>
+            <p>
+              Una medida para contribuir al ODS 8 es fomentar la creación de
+              empleo sostenible, proporcionar empleo digno.
+            </p>
+            <p>
+              El sector privado tiene un rol claro en la consecución de este
+              Objetivo, ya que es un actor principal para el crecimiento
+              económico y la creación de puestos de trabajo.
+            </p>
+          </div>
+
+          <div class="imgEj04">
+            <img src="./img/imagen5.jpg" alt="Imagen con sombra de derecha a izquierda" class="image1Ej04"/>
+            <img src="./img/imagen6.jpg" alt="Imagen con sombra de izquierda a derecha" class="image2Ej04"/>
+          </div>
+        </div>
+      </section><br><br>
+
+      <!-- Ejercicio 05 -->
+      <section id="ejercicio5">
+        <h2>· Ejercicio 05 ·</h2>
+        <div class="divEj05">
+          <input type="radio" name="filtro" id="filtro1Ej05" />
+          <label for="filtro1Ej05">Filtro 1: Invertido</label><br />
+
+          <input type="radio" name="filtro" id="filtro2Ej05" />
+          <label for="filtro2Ej05">Filtro 2: Hue Rotate</label>
+
+          <div class="contenedorImgEj05">
+            <img class="imagenEj05" src="./img/playa.jpg" alt="Imagen playa" width="300px" height="300px"/>
+            <div class="filtroTextoEj05">Playa</div>
+          </div>
+        </div>
+      </section><br><br>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+      <!-- En el pie de página aparecerá la información que quiera -->
+      <p>¿Qué le dice un .GIF a un .JPEG? -Anímate hombre.</p>
+    </footer>
+  </body>
+</html>
+<!---------------------------------------------------------------------------------------------------------->

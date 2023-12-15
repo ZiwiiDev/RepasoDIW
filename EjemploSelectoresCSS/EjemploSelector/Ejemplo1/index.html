@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css"> <!-- Enlace a un archivo CSS externo llamado 'style.css' -->
+    <title>Ejercicio 01 · Oliver</title>
+</head>
+<body>
+    <h1>Actividad 02 · Selectores</h1>
+
+     <!-- Ejercicio 01 -->
+    <h2>1º) Según la siguiente configuración con 'span':</span></h2>
+    <div id="uno">  <!-- Estructura 'uno' -->
+        <span>111</span>    <!-- Elementos 'span' -->
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+    </div><br>
+
+    <!-- Apartado a) -->
+    <p><strong>a) Rellena de color amarillo los elementos pares.</strong></p>
+    <div id="dos">   <!-- Estructura 'dos' -->
+        <span>111</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+    </div>
+    
+     <!-- Apartado b) -->
+    <p><strong>b) Rellena de color amarillo los elementos impares.</strong></p>
+    <div id="tres">  <!-- Estructura 'tres' -->
+        <span>111</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+    </div>
+
+     <!-- Apartado c) -->
+    <p><strong>c) Sobre la anterior estructura, rellena de color naranja el primer elemento.</strong></p>
+    <div id="cuatro">    <!-- Estructura 'cuatro' -->
+        <span>111</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+    </div>
+
+     <!-- Apartado d) -->
+    <p><strong>d) Rellena el último elemento con un color purpura (sobre la original).</strong></p>
+    <div id="cinco">     <!-- Estructura 'cinco' -->
+        <span>111</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+    </div>
+
+     <!-- Apartado e) -->
+    <p><strong>e) Sólo deben seleccionarse aquellos elementos que empiecen por 1. Teniendo un color
+        de fondo negro (sobre la original).</strong></p>
+    <div id="seis">  <!-- Estructura 'seis' -->
+        <span data-starts-with="1">111</span>   <!-- Atributo personalizado 'data-starts-with' para los elementos que empiecen por "1" -->
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span data-starts-with="1">10</span>
+        <span data-starts-with="1">11</span>
+        <span data-starts-with="1" >12</span>
+        <span data-starts-with="1">13</span>
+        <span data-starts-with="1">14</span>
+        <span data-starts-with="1">15</span>
+        <span data-starts-with="1">16</span>
+    </div>
+
+     <!-- Apartado f) -->
+    <p><strong>f) Partiendo de lo realizado en el apartado 'e', intenta que el color de fondo ahora sea
+        negro, pero solo cuando pasamos por encima del elemento.</strong></p>
+    <div id="siete">    <!-- Estructura 'siete' -->
+        <span data-starts-with="1">111</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span data-starts-with="1">10</span>
+        <span data-starts-with="1">11</span>
+        <span data-starts-with="1" >12</span>
+        <span data-starts-with="1">13</span>
+        <span data-starts-with="1">14</span>
+        <span data-starts-with="1">15</span>
+        <span data-starts-with="1">16</span>
+    </div>
+
+     <!-- Apartado g) -->
+    <p><strong>g) Aplica todas las anteriores reglas sobre una misma estructura. Analiza que ocurre.</strong></p>
+    <div id="ocho"> <!-- Estructura 'ocho' -->
+        <span data-starts-with="1">111</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span data-starts-with="1">10</span>
+        <span data-starts-with="1">11</span>
+        <span data-starts-with="1" >12</span>
+        <span data-starts-with="1">13</span>
+        <span data-starts-with="1">14</span>
+        <span data-starts-with="1">15</span>
+        <span data-starts-with="1">16</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* 1º) Según la siguiente configuración con 'span': */
+#uno span {
+    border: 2px dashed greenyellow;  /* Establezco un borde punteado en verde-amarillo */
+    padding: 3px;  /* Agrego un relleno de 3 píxeles */
+    margin: 3px;   /* Agrego un margen de 3 píxeles*/
+    color: aqua;   /* Cambio el color del texto a aqua */
+}
+/*----------------------------------------------------------------------*/
+/* a) Rellena de color amarillo los elementos pares. */
+#dos span {
+    border: 2px dashed greenyellow;
+    padding: 3px;
+    margin: 3px;
+    color: aqua;
+}
+
+/* También funciona con "#dos span:nth-child(2n+2)" */
+#dos span:nth-child(even) {
+    background-color: yellow; /* Cambio el fondo a amarillo en elementos pares */
+}
+/*----------------------------------------------------------------------*/
+/* b) Rellena de color amarillo los elementos impares. */
+#tres span {
+    border: 2px dashed greenyellow;
+    padding: 3px;
+    margin: 3px;
+    color: aqua;
+}
+
+/* También funciona con "#dos span:nth-child(2n+1)" */
+#tres span:nth-child(odd) {
+    background-color: yellow; /* Cambio el fondo a amarillo en elementos impares */
+}
+/*----------------------------------------------------------------------*/
+/* c) Sobre la anterior estructura, rellena de color naranja el primer elemento. */
+#cuatro span {
+    border: 2px dashed greenyellow;
+    padding: 3px;
+    margin: 3px;
+    color: aqua;
+}
+
+#cuatro span:nth-child(odd) {
+    background-color: yellow;
+}
+
+#cuatro span:first-child {
+    background-color: orange; /* Cambio el fondo a naranja en el primer elemento */
+}
+/*----------------------------------------------------------------------*/
+/* d) Rellena el último elemento con un color purpura (sobre la original). */
+#cinco span {
+    border: 2px dashed greenyellow;
+    padding: 3px;
+    margin: 3px;
+    color: aqua;
+}
+
+#cinco span:last-child {
+    background-color: purple; /* Cambio el fondo a morado en el último elemento */
+}
+/*----------------------------------------------------------------------*/
+/* e) Sólo deben seleccionarse aquellos elementos que empiecen por 1. Teniendo un color de fondo negro (sobre la original). */
+#seis span {
+    border: 2px dashed greenyellow;
+    padding: 3px;
+    margin: 3px;
+    color: aqua;
+}
+
+#seis span[data-starts-with^="1"] {
+    background-color: black; /* Cambio el fondo a negro en elementos que comienzan con "1" */
+}
+/*----------------------------------------------------------------------*/
+/* f) Partiendo de lo realizado en el apartado 'e', intenta que el color de fondo ahora sea negro, pero solo cuando pasamos por encima del elemento. */
+#siete span {
+    border: 2px dashed greenyellow;
+    padding: 3px;
+    margin: 3px;
+    color: aqua;
+}
+
+#siete span[data-starts-with^="1"]:hover {
+    background-color: black; /* Cambio el fondo a negro en elementos que comienzan con "1" cuando se pasa el retón por encima de ellos */
+}
+/*----------------------------------------------------------------------*/
+/* g) Aplica todas las anteriores reglas sobre una misma estructura. Analiza que ocurre. */
+#ocho span {
+    border: 2px dashed greenyellow;  /* Establezco un borde punteado en verde-amarillo */
+    padding: 3px;  /* Agrego un relleno de 3 píxeles */
+    margin: 3px;   /* Agrego un margen de 3 píxeles*/
+    color: aqua;   /* Cambio el color del texto a aqua */
+}
+
+#ocho span:nth-child(even) {
+    background-color: yellow; /* Cambio el fondo a amarillo en elementos pares */
+}
+
+#ocho span:nth-child(odd) {
+    background-color: yellow; /* Cambio el fondo a amarillo en elementos impares */
+}
+
+#ocho span:first-child {
+    background-color: orange; /* Cambio el fondo a naranja en el primer elemento */
+}
+
+#ocho span:last-child {
+    background-color: purple; /* Cambio el fondo a morado en el último elemento */
+}
+
+#ocho span[data-starts-with^="1"] {
+    background-color: black; /* Cambio el fondo a negro en elementos que comienzan con "1" */
+}
+
+#ocho span[data-starts-with^="1"]:hover {
+    background-color: black; /* Cambio el fondo a negro en elementos que comienzan con "1" cuando se pasa el retón por encima de ellos */
+}
+
+/* Al aplicar todas las reglas juntas en una misma estructura "ocho", se van a generar varios efectos, como que algunas reglas
+se van a anular y otras se van a sobreescribir. De la siguiente manera:
+    - Todos los elementos "span" tendrán un borde verde-amarillo punteado y color de texto aqua.
+    - Se rellenan con color de fondo amarillo todos los elementos pares.
+    - Se rellenan con color de fondo amarillo todos los elementos impares.
+    - Se debería aplicar el color de fondo naranja al primer elemento pero se sobreescribe por el negro porque es el último estilo que se aplica, por lo que no se ve.
+    - Se debería aplicar el color de fondo purpura al último elemento pero se sobreescribe por el negro porque es el último estilo que se aplica, por lo que no se ve.
+    - Se aplica fondo negro a todos los elementos que empiecen por "1".
+    - Se deberia aplicar el hover para que cuando se pase con el ratón por encima de los elementos que empiecen por "1" se cambie el fondo a negro,
+    pero no se aplica debido a que el fondo negro predomina por encima del hover (se aplica el fondo negro).
+*/

@@ -1,0 +1,18 @@
+p > em {
+    /* Selecciona todos los elementos <em> que son hijos directos de <p> */
+    background-color: antiquewhite;
+    color: rgb(255, 0, 0);
+}
+
+h2 + p {
+    /* Selecciona el siguiente elemento <p> que está inmediatamente precedidos por un elemento <h2> con el mismo padre */
+    background-color: beige;
+    font-size: 200%;
+    color: blue;
+}
+
+article ~ p {
+    /* Selecciona todos los elementos <p> que son hermanos de elementos <article> con el mismo padre */
+    background-color: blueviolet;
+    color: aqua;
+}

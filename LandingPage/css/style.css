@@ -1,0 +1,312 @@
+/*-------------------------------------------------------------------*/
+/* Importo fuente de internet para el Ejercicio 02 */
+@import url('https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap');
+
+/* Ejercicio 01 */
+/* Encabezado */
+header {
+  text-align: center; /* Centro mi nombre */
+  padding: 15px;  /* Le agrego un padding de 15px */
+  background-color: #f2f2f2;  /* Fondo gris clarito */
+}
+
+/* La barra de navegación debe quedarse fija siempre en la parte superior de la pantalla
+cuando se haga scroll (el encabezado puede desaparecer) */
+nav {
+  background-color: black;  /* Color de fondo negro */
+  position: sticky; /* Para mantener fija siempre la barra de navegación */
+  top: 0px; /* En la parte superior */
+  overflow: hidden; /* Hago que todo el contenido que sobresalga se oculte */
+  z-index: 1; /* Para que las imágenes de fondo no se superpongan al menú */
+}
+
+nav a {
+  float: left;  /* Muevo los elementos a la izquierda */
+  color: white; /* Color de texto blanco por defecto */
+  padding: 15px;  /* Padding de 15px */
+}
+
+nav a:hover {
+  background-color: greenyellow;  /* Al pasar el ratón por encima cambio el fondo a verde clarito */
+  color: black; /* Al pasar el ratón por encima cambio el color de texto a negro */
+}
+
+/* Cuerpo */
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;  /* Fuente principal y la fuente alternativa */
+  margin: 0;  /* 0 de margen */
+  padding: 0; /* 0 de padding */
+}
+
+section {
+  padding-left: 20px; /* Cada sección tendrá un padding-left de 20px */
+}
+
+/* Pie de página */
+footer {
+  text-align: center; /* Centro el texto del footer */
+  background-color: #242424;  /* Fondo gris-marrón para el footer */
+  color: white;  /* Color de texto blanco */
+  bottom: 0;  /* Situado abajo del todo */
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;  /* Que ocupe todo el espacio horizontal de la página */
+}
+/*-------------------------------------------------------------------*/
+/* Ejercicio 02 */
+table {
+  border-collapse: collapse;  /* Para que sea una línea el borde */
+  width: 35%;
+  margin: 30px;
+  border-color: rgb(65, 64, 64);  /* Color del borde de la tabla */
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #6d6d6d;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+a {
+  color: blue;
+  text-decoration: none;  /* El texto no tendrá decoración (para quitar el subrayado) */
+}
+
+/* Ejemplo 1: font-variant-numeric */
+p.ejemplo1Ej02 {
+  margin-left: 120px;
+  color: purple;
+  font-variant-numeric: oldstyle-nums;  /* Permite darle estilo a los números de un texto */
+}
+
+/* Ejemplo 2: letter-spacing */
+p.ejemplo2Ej02 {
+  margin-left: 120px;
+  color: purple;
+  letter-spacing: 0.5em; /* Permite modificar el espacio entre los caracteres de un texto */
+}
+
+/* Ejemplo 3: text-align-last */
+p.ejemplo3Ej02 {
+  margin-left: 120px;
+  color: purple;
+  text-align-last: center;  /* Controla la alineación del último renglón del texto de varias líneas */
+}
+
+/* Ejemplo 4: word-spacing */
+p.ejemplo4Ej02 {
+  margin-left: 120px;
+  color: purple;
+  word-spacing: 15px;  /* Permite definir el espacio adicional entre palabras de un texto */
+}
+
+/* Ejemplo 5 normal: line-height */
+p.ejemplo5Ej02Normal {
+  margin-left: 120px;
+  color: purple;
+  line-height: normal;  /* Define la altura de línea para un elemento de texto */
+}
+
+/* Ejemplo 5 ajustada: line-height */
+p.ejemplo5Ej02Ajustada {
+  margin-left: 120px;
+  color: purple;
+  line-height: 1.5;  /* Define la altura de línea para un elemento de texto */
+}
+
+/* Aplico la fuente importada a los h3 dentro de los div */
+div > h3 {
+  font-family: 'Waiting for the Sunrise', cursive;  /* Fuente principal importada de internet y en cursiva */
+}
+/*-------------------------------------------------------------------*/
+/* Ejercicio 03 */
+#divEj03 {
+  position: relative; /* Cambio la posición original del elemento, en este caso es relativo a la página entera */
+  width: 400px;
+  height: 400px;
+  border: 2px solid #000000; /* Establezco borde del "div" de color negro y 2px de grosor */
+}
+
+.zona {
+  position: absolute; /* Que se posicione respecto al contenedor posicionado más cercano */
+  width: 50%;
+  height: 50%;
+  background-size: cover; /* La imagen se renderiza preservando su proporción propia */
+}
+
+.zona:hover {
+  opacity: 0.8; /* Cambio la opacidad al hacer hover */
+}
+
+.zona:hover::before {
+  content: attr(data-imagen); /* Utilizo el atributo data-imagen directamente */
+  position: absolute; /* Para situar el texto donde queremos (en la parte superior central) */
+  top: 10%; /* Ajusto la posición vertical */
+  left: 50%;  /* Ajusto la posición horizontal */
+  transform: translateX(-50%); /* Para posicionarlo desde el eje X hacia arriba */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo del texto */
+  padding: 10px;
+  border-radius: 5px; /* Hago que las esquinas no estén en punta sino redondas por estética */
+  white-space: nowrap; /* Controlo los espacios de línea y los espacios en blanco */
+  font-size: 20px;  /* Tamaño del texto */
+  color: purple;  /* Color del texto */
+}
+
+.zona1 {
+  top: 0;
+  left: 0;
+  background-image: url('../img/imagen1.jpg'); /* Adjunto la primera imagen */
+}
+
+.zona2 {
+  top: 0;
+  left: 50%;
+  background-image: url('../img/imagen2.jpg');
+}
+
+.zona3 {
+  top: 50%;
+  left: 0;
+  background-image: url('../img/imagen3.jpg');
+}
+
+.zona4 {
+  top: 50%;
+  left: 50%;
+  background-image: url('../img/imagen4.jpg');
+}
+/*-------------------------------------------------------------------*/
+/* Ejercicio 04 */
+/* El título del objetivo sostenible debe tener una fuente importada de internet */
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+
+/* Fuemnte cargada de forma local de nuestro equipo (descargada previamente de intenet) */
+@font-face {
+  font-family: 'PrincessSofia';
+  src: local('PrincessSofia-Regular'), url('../fonts/PrincessSofia-Regular.ttf') format('truetype');
+}
+
+.titleEj04 {
+  font-family: 'Solitreo', 'Lucida Sans', cursive;  /* Aparte de la fuente de internet debe tener fuentes alternativas */
+  word-spacing: 25px; /* Separación entre palabras de 25px */
+}
+
+.divEj04 {
+  max-width: 800px;
+}
+
+.ods8Ej04 {
+  column-count:2; /* Número de columnas*/ 
+  column-width: 100px;  /* Definimos el ancho de nuestras columnas*/
+  column-gap: 30px; /* Determina el espacio entre las columnas*/
+  column-rule: 8px green  groove; /* Definimos el separador o regla indicando ancho, color y estilo*/
+  font-family: 'PrincessSofia', 'Times New Roman', 'Georgia'; /* Fuente principal y alternativas */
+}
+
+.image1Ej04 {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Aplico sombra de derecha a izquierda */
+  margin-top: 35px;
+  margin-left: 15px;
+  width: 50%;
+  height: 50%;
+  background-size: cover; /* La imagen se renderiza preservando su proporción propia */
+}
+
+.image2Ej04 {
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);  /* Aplico sombra de izquierda a derecha */
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 50%;
+  height: 50%;
+  background-size: cover; /* La imagen se renderiza preservando su proporción propia */
+}
+
+/* La letra primera de cada párrafo tiene que ser una letra capital (mínimo 20px) */
+.ods8Ej04 p::first-letter {
+  font-size: 40px;
+}
+
+/* Media query para un dispositivo de menos de 620px */
+@media screen and (max-width: 620px) {
+  .ods8Ej04 {
+    column-count: 1;  /* Muestro el texto en una sóla columna */
+    text-transform: uppercase; /* Convierto todo el texto a mayúsculas */
+  }
+
+  .image2Ej04 {
+    box-shadow: none; /* Desaparecen las sombras de imágenes */
+    display: none; /* Oculto la segunda imagen */
+  }
+
+  .image2Ej04 {
+    box-shadow: none; /* Desaparecen las sombras de imágenes */
+    width: 100%; /* Ajusto el ancho al 100% para ocupar toda la columna */
+    height: auto; /* Permito que la altura se ajuste automáticamente */
+  }
+}
+/*-------------------------------------------------------------------*/
+/* Ejercicio 05 */
+.divEj05 {
+  border: 3px solid black;  /* Borde al div de color negro sólido y 3px de grosor */
+  width: 750px;
+  height: 300px;
+}
+
+.contenedorImgEj05 {
+  position: relative; /* Cambio la posición original del elemento, en este caso es relativo al div de divEj05 */
+  float: left;  /* Alterno el comportamiento del contenedor y lo posiciono a la izquierda */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);  /* Aplico sombra al contenedor */
+  padding: 15px;
+  margin-left: 330px;
+  margin-top: -190px;
+}
+
+.imagenEj05 {
+  position: relative; /* Cambio la posición original del elemento, en este caso es relativo al div de contenedorImgEj05 */
+  max-width: 100%;  /* Reduzco la imagen de 500px a 360px */
+  height: auto; /* Especifico la altura del elemento para que se adapte automáticamente a las restrincciones */
+}
+
+.filtroTextoEj05 {
+  text-align: center; /* Centro el texto */
+  margin-top: 10px;
+  font-weight: bold;  /* Lo pongo en negrita */
+}
+
+#filtro1Ej05 {
+  margin-left: 30px;
+  margin-top: 90px;
+}
+
+#filtro2Ej05 {
+  margin-left: 30px;
+  margin-top: 90px;
+}
+
+#filtro1Ej05:checked ~ .contenedorImgEj05 .imagenEj05 {
+  filter: invert(100%); /* Le aplico el filtro de invertido a la imagen */
+}
+
+#filtro2Ej05:checked ~ .contenedorImgEj05 .imagenEj05 {
+  filter: hue-rotate(90deg);  /* Aplico el filtro de cambiar el tono del color de la imagen */
+}
+
+#filtro1Ej05:checked ~ .contenedorImgEj05 .filtroTextoEj05::before {
+  content: "Filtro Invertido: ";  /* Añado el texto antes de "Playa" */
+}
+
+#filtro2Ej05:checked ~ .contenedorImgEj05 .filtroTextoEj05::before {
+  content: "Filtro Hue Rotate: "; /* Añado el texto antes de "Playa" */
+}
+/*-------------------------------------------------------------------*/
